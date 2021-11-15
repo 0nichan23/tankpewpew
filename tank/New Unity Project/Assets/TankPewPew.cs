@@ -7,16 +7,12 @@ public class TankPewPew : MonoBehaviour
     CharacterController cc;
     public float speed = 5f;
     public float rotatespeed = 5f;
-    public Camera cam;
-    float maxY = 60f;
-    float minY = -60f;
     float rotation;
     public ParticleSystem boom;
 
     void Start()
     {
         cc = GetComponent<CharacterController>();
-         
     }
 
     void Update()
@@ -24,8 +20,6 @@ public class TankPewPew : MonoBehaviour
         movement();
         rotate();
     }
-
-
     void movement()
     {
         if (Input.GetKey(KeyCode.W))
